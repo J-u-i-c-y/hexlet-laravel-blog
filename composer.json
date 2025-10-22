@@ -54,7 +54,8 @@
         "test": [
             "@php artisan config:clear --ansi",
             "@php artisan test"
-        ]
+        ],
+        "lint": "find . -name '*.php' -not -name '*.blade.php' -print0 | xargs -0 -n1 php -l"
     },
     "extra": {
         "laravel": {
@@ -71,5 +72,8 @@
         }
     },
     "minimum-stability": "stable",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "files.associations": {
+        "*.blade.php": "blade"
+    }
 }
